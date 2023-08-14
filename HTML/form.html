@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place order form</title>
+    <link rel="stylesheet" href="CSS\form.css">
+</head>
+<body>
+    <form action="" method="get" class="order-form" >
+        <h2>Shipping</h2>
+        <div class="name">
+            
+            <div class="first-name">
+                <h3>First name <span id="fname-error">*</span></h3>
+                <input type="text" placeholder="Num" id="firstName" oninput="firstNameValidation(this)"><br>
+                
+            </div>
+            <div class="last-name">
+                <h3>Last name <span id="lname-error">*</span></h3>
+                <input type="text" placeholder="Num" id="lastName"  oninput="lastNameValidation(this)"><br>
+            </div>
+        </div>
+        <div class="bill-add">
+            
+            <div class="box">
+                <h3>Shipping address <span id="ship-error">*</span></h3>
+                <input type="text" placeholder="Num" id="add" oninput="shippingValidation(this)"><br>
+          
+          
+            </div>
+            
+        </div>
+        <div class="bill-add">
+            
+            <div class="box">
+                <h3>Company, C/O, Apt, Suite, Unit <span id="apt-no">*</span></h3>
+                <input type="text" placeholder="Num" id="apartment" oninput="aptValidation(this)"><br>
+            </div>
+            
+        </div>
+        <div class="address">
+            
+            <div class="box">
+                <h3>city <span id="city-error">*</span></h3>
+                <input type="text" placeholder="Num" id="city" oninput="cityValidation(this)"><br>
+            </div>
+            <div class="box">
+                <h3>state <span id="state-error">*</span></h3>
+                <input type="text" placeholder="Num" id="state" oninput="stateValidation(this)"><br>
+            </div>
+            <div class="box">
+                <h3>zip <span id="zip-error">*</span></h3>
+                <input type="text" placeholder="Num" id="zip" oninput="zipValidation(this)"><br>
+            </div>
+            
+        </div>
+
+        <div class="delivery">
+            
+            <div class="delivery-box">
+
+                <input type="radio" placeholder="Num" id="standard" name="delivery">
+                <label for="standard">Standard (4-10 Days)</label>
+
+            </div>
+            <div class="delivery-box">
+
+                <input type="radio" placeholder="Num" id="priority" name="delivery">
+                <label for="priority">Fast (3-5 Days)</label>
+
+            </div>
+            
+        </div>
+
+        <div class="credit">
+            
+            <div class="credit-card">
+                <h3>Credit Cards <span id="credit-error">*</span></h3>
+                <input type="number" placeholder="Num" id="card-number" oninput="creditCard(this)">
+            </div>
+            <div class="expiry-date">
+                <h3>Expiry Date <span id="expiry-error">*</span></h3>
+                <input type="number" placeholder="Num" id="expiry-date"  oninput="expiry(this)">
+            </div>
+            <div class="cvc">
+                <h3>CVC <span id="cvc-error">*</span></h3>
+                <input type="number" placeholder="Num" id="security" oninput="cvc(this)">
+            </div>
+            
+        </div>
+        
+        
+        <div class="button">
+            <button type="submit"  id="my_btn">CHECKOUT</button>
+        </div>
+        
+
+    </form>
+
+
+    <div class="quick_view" id="quickView">
+        <div class="quick-view-content">
+            <button id="close">X</button><br>
+            <h2 style="color: azure;">Your order has been placed</h2>
+            
+            
+        </div>
+    </div>
+
+    <script src="JS\form.js"></script>
+</body>
+</html>

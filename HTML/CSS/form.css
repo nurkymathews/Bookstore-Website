@@ -1,0 +1,289 @@
+@charset "UTF-8";
+ 
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151B29;
+}
+
+.order-form
+{
+    
+    background-color: #CCCCCC;
+    margin: 20px;
+    width: 60%;
+    
+    padding: 30px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins',sans-serif;
+}
+.order-form h2
+{
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 20px;
+    border-bottom: 2px solid black;
+}
+.name
+{
+    
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.bill-add
+{
+    margin-top: 10px;
+    padding: 10px 10px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box
+{
+    width: 95%;
+}
+
+.box input
+{
+    width: 100%;
+    font-weight: 600;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 10px;
+
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-size: 20px;
+}
+
+.address
+{
+    margin-top: 10px;
+    padding: 10px 10px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.address .box
+{
+    width: 30%;
+}
+
+.box input
+{
+    width: 100%;
+    font-weight: 600;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.delivery
+{
+    margin-top: 10px;
+    
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery .delivery-box {
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 95%;
+    border: black 2px solid;
+    font-weight: 400;
+    background-color: aliceblue;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+label
+{
+    color: black;
+    margin-left: 10px;
+}
+
+.credit
+{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.credit .credit-card,.expiry-date,.cvc
+{
+    
+    border-radius: 5px;
+    width: 95%;
+    font-weight: 400;
+    color: black;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.credit input{
+    width: 95%;
+    padding: 10px 10px;
+    color: black;
+    font-weight: 600;
+    margin-top: 10px;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-size: 20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button 
+  {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+  }
+
+.credit .credit-card
+{
+    
+    width: 350%;
+}
+.credit .credit-card input
+{
+    margin-left: 10px;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.name input[type="text"]{
+    width: 400px;
+    font-weight: 600;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 10px;
+
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-size: 20px;
+}
+button
+{
+
+    width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    background-color: #663399;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 30px 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button
+{
+    display: flex;
+    justify-content: center;
+
+}
+p{
+    font-weight: 400;
+}
+   
+h2,h3 {
+    border-bottom: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* form submit */
+
+
+
+
+.quick_view {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgb(57, 55, 96);
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 2px 2px 2px gold;
+
+}
+
+
+
+#close {
+    width: 2em;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+}
+
+#close:hover {
+    background-color: rgb(219, 5, 5);
+}
+
+
+
+.quick-view-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+
+}
+
+
+.quick-view-content {
+    position: relative;
+}

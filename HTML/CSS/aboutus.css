@@ -1,0 +1,412 @@
+@charset "UTF-8";
+ 
+     *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* navigation bar */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #151B29;
+    color: #ffa260;
+    
+}
+
+
+h1 {
+  font-size: 6em;
+  text-align: center;
+  
+}
+nav {
+  padding: 10px;
+  color: #ffa260;
+  background-color:  #151B29;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0%;
+  z-index: 9;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #333 1px solid;
+}
+
+@media (max-width: 768px){
+nav{
+  border-bottom: none;
+}
+#sideNavBar{
+  border-bottom: #333 1px solid;
+}
+.carousel{
+  display: none;
+}
+}
+
+.scrolled {
+  background: whitesmoke;
+  transition: background 500ms;
+}
+
+a{
+color: #ffa260;
+text-decoration: none;
+}
+
+#login a:nth-of-type(1)
+{
+position: relative;
+}
+
+
+
+.circle
+{
+position: absolute;
+top: 4px;
+right: 2px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:  #4CAF50;
+color: #fff;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+}
+
+ul
+{
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+ul,li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+@media (max-width: 768px){
+  h1 {
+      font-size: 4em;
+  }
+  nav ul {
+      
+      display: none;
+  }
+
+  /* nav icon bar */
+  .container {
+      padding-left:  10px;
+      display: inline-block;
+      cursor: pointer;
+      z-index: 9;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #ffa260;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    
+
+}
+@media (max-width: 576px){
+  h1 {
+      font-size: 2em;
+  }
+}
+
+
+/* the bar icon */
+#sideNavBar
+{
+  background-color: #151B29;
+  position: sticky;
+  top: 9%;
+  display: flex;
+  z-index: 9;
+  justify-content: space-between; 
+  
+}
+
+
+#sidebar
+{
+
+  position: fixed;
+  top: 6%;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  
+  /* Off-screen initially */
+  position: absolute;
+  left: -2000px;
+  transition: left 0.3s ease; 
+}
+
+#box1 
+{  background-color: #83a7a5;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  margin: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#box1 #box1txt{
+  color: #ffffff;
+  width: 40%;
+  text-align: center;
+}
+#box1 #box1txt h3{
+display: none;
+}
+#box1 #box1img{
+  color: #ffffff;
+  width: 40%;
+  text-align: center;
+}
+#box1img img{
+  height: 200px;
+  width: 200px;
+}
+
+#box2
+{  background-color: #83a7a5;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  margin: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+#box2 #box2img{
+  color: #ffffff;
+  width: 40%;
+}
+#box2img img{
+  height: 500px;
+  width: 500px;
+}
+#box2 #box2txt{
+  color: #ffffff;
+  width: 40%;
+  text-align: center;
+}
+.learn-more{
+  opacity: 60%;
+  font-size: smaller;
+  color:white ;
+
+}
+
+#showless{
+  opacity: 60%;
+  font-size: smaller;
+  color:white ;
+}
+
+.scrollform {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+  display: none;
+}
+
+/* Style for the form row */
+.formrow {
+  margin-bottom: 15px;
+}
+
+/* Style for the form label */
+.signupemail label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for the input field */
+.signupemail input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the submit button */
+.clear .formbutton{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.clear .formbutton:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style for asterisk */
+.asterisk {
+  color: red;
+  margin-left: 3px;
+}
+
+/* Optional: Center align the form */
+#signup_scroll {
+  text-align: center;
+}
+
+footer {
+  padding: 0;
+  text-align: center;
+}
+#footer .row {
+  display: flex;
+  justify-content: space-around;
+  
+
+}
+
+#footer .events {
+
+  width: 40%;
+}
+
+#footer .contacts {
+
+  width: 40%;
+}
+#footer .socials {
+
+  width: 40%;
+  text-align: center;
+}
+
+/* Optional: Style the content within the columns */
+#footer .events .padding,
+#footer .contacts .padding, 
+#footer .socials .padding {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#footer .events .padding h6,
+#footer .contacts .padding h6,
+#footer .socials .padding h6 {
+  margin-bottom: 10px;
+}
+
+/* Optional: Adjust spacing and alignment */
+#footer .events .padding p,
+#footer .contacts .padding p
+#footer .socials .padding p {
+  margin: 20px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+footer span.copyright {
+  font-size: 90%;
+  line-height: 40px;
+  text-transform: none;
+  font-family: 'Montserrat';
+}
+
+footer ul.quicklinks {
+  font-size: 90%;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: 'Montserrat';
+}
+
+
+/*---------------------------------------------------------*/
+.video{width: 560px;height: 315px;}
+@media screen and (max-width:671px) {
+  .video{width: 100%;height: 315px;}
+}
+
+
+
+@media (max-width: 768px)
+  {
+  
+    section #fourth,#fifth,
+    #sixth,#seventh,#eight,#ninth,#ten
+    {
+        display: none;
+    }
+  }
+
+

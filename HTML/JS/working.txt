@@ -1,0 +1,91 @@
+working
+----------------------------------------------
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the cart items from session storage
+    let cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+  
+    // Display the cart items on the cart page
+      const cartItemsContainer = document.querySelector('.book');
+      cartItems.forEach(item =>
+      {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item-2'; // Add the class 'item-2' to the main container div
+    
+        // Create the first item div
+        const itemDiv1 = document.createElement('div');
+        itemDiv1.className = 'item';
+    
+        // Create the photo div
+        const photoDiv = document.createElement('div');
+        photoDiv.className = 'photo';
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.alt = item.title;
+        photoDiv.appendChild(image);
+    
+        // Create the photo-side div
+        const photoSideDiv = document.createElement('div');
+        photoSideDiv.className = 'photo-side';  
+        const titleH2 = document.createElement('h2');
+        titleH2.innerText = item.title;
+        photoSideDiv.appendChild(titleH2);
+    
+        itemDiv1.appendChild(photoDiv);
+        itemDiv1.appendChild(photoSideDiv);
+    
+        // Create the second item div for quantity input
+        const itemDiv2 = document.createElement('div');
+        itemDiv2.className = 'item';
+        const quantityDiv = document.createElement('div');
+        quantityDiv.className = 'quantity';
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.name = 'quantity';
+        quantityInput.min = '1';
+        quantityInput.max = '10';
+        quantityInput.value = '1';
+        quantityDiv.appendChild(quantityInput);
+        itemDiv2.appendChild(quantityDiv);
+    
+        // Create the third item div for price and delete button
+        const itemDiv3 = document.createElement('div');
+        itemDiv3.className = 'item';
+        const priceDiv = document.createElement('div');
+        priceDiv.className = 'price';
+        const priceParagraph = document.createElement('p');
+        const priceSpan = document.createElement('span');
+        priceSpan.className = 'line-through';
+        priceSpan.innerText = '$ ' + item.price;
+        priceParagraph.appendChild(priceSpan);
+        priceParagraph.innerHTML += '<br> $ ';
+        priceDiv.appendChild(priceParagraph);
+    
+        // Create the delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.id = 'icon';
+        const trashIcon = document.createElement('i');
+        trashIcon.className = 'bx bx-trash';
+        trashIcon.style.fontSize = '25px';
+        deleteButton.appendChild(trashIcon);
+    
+        itemDiv3.appendChild(priceDiv);
+        itemDiv3.appendChild(deleteButton);
+    
+        // Append all three item divs to the main container div
+        itemDiv.appendChild(itemDiv1);
+        itemDiv.appendChild(itemDiv2);
+        itemDiv.appendChild(itemDiv3);
+    
+        // Append the main container div to the cart items container
+        cartItemsContainer.appendChild(itemDiv);
+    });
+  });
+  

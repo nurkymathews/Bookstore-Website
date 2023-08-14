@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS\signup.css" />
+    
+    <title>Signup Page</title>
+</head>
+<body>
+<div class="order-form">
+    <form id="myForm" onsubmit="return validateForm()">
+        <h2 style="font-family: Comic Sans Ms; font-size: 30pt; color:black;">
+            <marquee>WWW.BOOKS.COM</marquee>
+        </h2>
+      <h2>Register with us</h2><br>
+
+        <div class="bill-add">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required oninput="validateEmail()">
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="bill-add">
+            <label for="confirmEmail">Re-enter Email Address:</label>
+            <input type="email" id="confirmEmail" required oninput="validateConfirmEmail()">
+            <span class="error" id="confirmEmailError"></span>
+        </div>
+
+        <div class="name">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required oninput="validateName('firstName')">
+            <span class="error" id="firstNameError"></span>
+        </div>
+
+        <div class="name">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="firstName" required oninput="validateName('lastName')">
+            <span class="error" id="lastNameError"></span>
+        </div>
+
+        <div class="bill-add">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" required oninput="validateContactNumber()">
+
+            <span class="error" id="contactNumberError"></span>
+        </div>
+
+        <div class="button">
+            <button type="submit">Sign Up</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="JS\formLogin.js"></script>
+
+</body>
+</html>

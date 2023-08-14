@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop</title>
+
+    <!-- footer icons link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+
+    <!--Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+    
+    <!-- CSS linked page -->
+    <link rel="stylesheet" href="CSS\app.css">
+    
+    <style type="text/css" id="operaUserStyle"></style>
+
+    <!-- link for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html">Bookshop</a>
+        <ul>
+            <li>
+                <a href="index.html" id = "border-bottom-1">Home</a>
+            </li>
+            <li>
+                <a href="books.html" id = "border-bottom-2">books</a>
+            </li>
+            <li>
+                <a href="about us.html" id = "border-bottom-3">about us</a>
+            </li>
+        </ul>
+        <div id="login">
+            <a href="login.html" id="id"><i class='bx bx-user'></i></a>
+            <a href="cart.html" id="cart">
+                <i class='bx bx-cart' ></i>
+                <div id="circle" class="" style="font-size: 12px; font-weight: 1000;"></div>
+            </a>
+        </div>
+    </nav>
+    <div id="sideNavBar">
+        <div class="container" onclick="myFunction()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <a href="index.html" id = "border-1">Home</a>
+            <a href="books.html" id = "border-2">Books</a>
+            <a href="about us.html" id = "border-3">About Us</a>
+        </div>
+    </div>
+
+    <marquee behavior="scroll" direction="left">
+        <p>The products achieved remarkable success with 50 Million copies Sold WorldWide!</p>
+    </marquee>
+
+    <div class="carousel">
+        <div class="carousel-container">
+          
+            
+            <img src="https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/286/original/Bridge_2048x600.png?1691507549" alt="">
+    
+            <img src="https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/287/original/SunHouse_2048x600.jpg?1691507395" alt="">
+          
+        </div>
+      </div>
+      
+        <main id="featured">
+            <div class="Section-head">
+                <h2>Most Featured</h2>
+                <a href="books.html" >view all</a>
+            </div>
+            
+            <div class="sliderContainer">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="books\book-1.jpg" alt="">
+                        <button class="buttons"  onclick="addToCart('My Name Is Iris: A Novel', 'books\\book-1.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-2.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Tom Lake', 'books\\book-2.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-3.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Mobility: A Novel', 'books\\book-3.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-4.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('The Apology', 'books\\book-4.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide" >
+                        <img src="books\book-5.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('A Kind of In-Between', 'books\\book-5.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-6.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Las Madres', 'books\\book-6.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-7.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Dark Days: Fugitive Essays', 'books\\book-7.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-8.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Family Lore', 'books\\book-8.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-9.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Time\'s Mouth', 'books\\book-9.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-10.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('Iron Flame', 'books\\book-10.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-11.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('The Ministry for the Future', 'books\\book-11.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-12.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('The World Belonged to Us', 'books\\book-12.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-13.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('What the Wind Knows', 'books\\book-13.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-14.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('This Time Tomorrow', 'books\\book-14.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    <div class="slide">
+                        <img src="books\book-15.jpg" alt="">
+                        <button class="buttons" onclick="addToCart('This Is How You Lose the Time War', 'books\\book-15.jpg', 19.99)">
+                            <i class='bx bx-cart' ></i>
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            <button id="prevButton" class="arrowButton"> </button>
+        
+            <button id="nextButton" class="arrowButton"> </button>
+        </main>
+        
+
+
+
+    <main id="trending">
+        <div class="Section-head">
+            <h2>Trending</h2>
+            <a href="books.html" >view all</a>
+        </div>
+        <div class="sliderContainer-2">
+            <div class="slider-2">
+                <div class="slide-2">
+                    <img src="books\book-16.jpg" alt="">
+                    <button class="buttons" onclick="addToCart('Brave Every Day', 'books\\book-16.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-17.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Fourth Wing', 'books\\book-17.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-18.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('This Other Eden', 'books\\book-18.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-19.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('How to Build a Boat', 'books\\book-19.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-20.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('If I Survive You', 'books\\book-20.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-21.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Poet X', 'books\\book-21.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-22.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Inheritance: A Visual Poem', 'books\\book-22.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-23.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Take the Lead', 'books\\book-23.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-24.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Stand-In', 'books\\book-24.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-25.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('American Royalty', 'books\\book-25.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-26.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Sizzle Reel', 'books\\book-26.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-27.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Neighbour Favor', 'books\\book-27.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-28.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Neighbour Favor', 'books\\book-28.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-29.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('An Island Princess Starts a Scandal', 'books\\book-29.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-2">
+                    <img src="books\book-30.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Kiss the Girl', 'books\\book-30.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <button id="prev" class="arrowButton "> </button>
+        <button id="next" class="arrowButton "> </button> 
+    </main>
+
+
+
+
+
+    <main id="popular">
+        <div class="Section-head">
+            <h2>Popular</h2>
+            <a href="books.html">view all</a>
+        </div>
+        <div class="sliderContainer-3">
+            <div class="slider-3">
+                <div class="slide-3">
+                    <img src="books\book-31.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('A Garden to Save the Birds', 'books\\book-31.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-32.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Protect The Pollinators', 'books\\book-32.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-33.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Honeybee', 'books\\book-33.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-34.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('It Starts with a Bee: Watch a Tiny Bee Bring the World to Bloom', 'books\\book-34.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-35.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Black Boy Joy: 17 Stories Celebrating Black Boyhood', 'books\\book-35.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-36.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Written in the Stars', 'books\\book-36.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-37.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Hood Feminism: Notes from the Women That a Movement Forgot', 'books\\book-37.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-38.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Parable of the Sower', 'books\\book-38.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-39.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Witches: The Transformative Power of Women Working Together', 'books\\book-39.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-40.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Time\'s Mouth', 'books\\book-40.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-41.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Prom Mom', 'books\\book-41.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-42.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Shutter', 'books\\book-42.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-43.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('Chain Gang All Stars', 'books\\book-43.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-44.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('The Man with the Getaway Face', 'books\\book-44.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+                <div class="slide-3">
+                    <img src="books\book-45.jpg" alt="">
+                    <button class="buttons"  onclick="addToCart('All the Sinners Bleed', 'books\\book-45.jpg', 19.99)">
+                        <i class='bx bx-cart' ></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button id="prev-2" class="arrowButton"> </button>
+        <button id="next-2" class="arrowButton"> </button>
+    </main>
+    
+
+
+    <main id="wellness">
+        <div class="Section-head">
+            <h2>Popular</h2>
+            <a href="books.html">view all</a>
+        </div>
+        
+        <Section>
+            <article id="first" class="box">
+                <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><div class="inside-box"><img src="books\book-46.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>And When She Was Good</h4></a>
+                    <p>Laura Lippman</p>
+                </div>
+            </article>
+            <article id="second" class="box">
+                <a href="product.html" onclick="addToProduct('The Most Dangerous Thing', 'books\\book-47.jpg', 19.19, 'Laura Lippman')"><div class="inside-box"><img src="books\book-47.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>The Most Dangerous Thing</h4></a>
+                    <p>Laura Lippman</p>
+                </div>
+            </article>
+            <article id="third" class="box">
+                <a href="product.html" onclick="addToProduct('The Hunter', 'books\\book-48.jpg', 19.19, 'Richard Stark')"><div class="inside-box"><img src="books\book-48.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>The Hunter</h4></a>
+                    <p>Richard Stark</p>
+                </div>
+            </article>
+            <article id="fourth" class="box">
+                <a href="product.html" onclick="addToProduct('The Weight of This World', 'books\\book-49.jpg', 19.19, 'David Joy')"><div class="inside-box"><img src="books\book-49.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>The Weight of This World</h4></a>
+                    <p>David Joy</p>
+                </div>
+            </article>
+            <article id="fifth" class="box">
+                <a href="product.html" onclick="addToProduct('Where All Light Tends to Go', 'books\\book-50.jpg', 19.19, 'David Joy')"><div class="inside-box"><img src="books\book-50.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>Where All Light Tends to Go</h4></a>
+                    <p>David Joy</p>
+                </div>
+            </article>
+            <article id="sixth" class="box">
+                <a href="product.html" onclick="addToProduct('Little Monsters', 'books\\book-51.jpg', 19.19, 'Adrienne Brodeur')"><div class="inside-box"><img src="books\book-51.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>Little Monsters</h4></a>
+                    <p>Adrienne Brodeur</p>
+                </div>
+            </article>
+            <article id="seventh" class="box">
+                <a href="product.html" onclick="addToProduct('Perfidia', 'books\\book-52.jpg', 19.19, 'Mama')"><div class="inside-box"><img src="books\book-52.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>Perfidia</h4></a>
+                    <p>James Ellroy</p>
+                </div>
+            </article>
+            <article id="eight" class="box">
+                <a href="product.html" onclick="addToProduct('Friday Black', 'books\\book-53.jpg', 19.19, 'Nana Kwame Adjei-Brenyah')"><div class="inside-box"><img src="books\book-53.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>Friday Black</h4></a>
+                    <p>Nana Kwame Adjei-Brenyah</p>
+                </div>
+            </article>
+            <article id="ninth" class="box">
+                <a href="product.html" onclick="addToProduct('The House on Henry Street: The Enduring Life of a Lower East Side Settlement', 'books\\book-54.jpg', 19.19, 'Ellen M Snyder-Grenier')"><div class="inside-box"><img src="books\book-54.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>The House on Henry Street</h4></a>
+                    <p>Ellen M Snyder-Grenier</p>
+                </div>
+            </article>
+            <article id="ten" class="box">
+                <a href="product.html" onclick="addToProduct('The House on Henry Street: The Enduring Life of a Lower East Side Settlement', 'books\\book-55.jpg', 19.19, 'Ellen M Snyder-Grenier')"><div class="inside-box"><img src="books\book-55.jpg" alt=""></div></a>
+                <div class="description">
+                    <a href="product.html" onclick="addToProduct('And When She Was Good', 'books\\book-46.jpg', 19.19, 'Laura Lippman')"><h4>The House on Henry Street</h4></a>
+                    <p>Ellen M Snyder-Grenier</p>
+                </div>
+            </article>
+        </Section>
+    
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>BROWSE</h4>
+                    <ul>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="about us.html">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>GET IN TOUCH</h4>
+                    <ul>
+                     
+                        <li>T (+30) 6973 016311</li>
+                        <li>Email:<a href="mailto:cryptomaniac@gmail.com">vip@paradiseclubmykonos.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+
+
+    <!-- Javascript Cart Page Buttons -->
+    <script src="JS\toCartPage.js"></script>
+
+    <!-- Javascript Product Page Buttons -->
+    <script src="JS\toProductPage.js"></script>
+    
+    <!-- Other Javascript functionality -->
+    <script src="JS\Javascript.js"></script>
+
+    <!-- coursel Javascript functionality -->
+    <script src="JS\coursel.js"></script>
+</body>
+</html>
